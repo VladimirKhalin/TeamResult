@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124DD2772A9D0719009E01D7 /* SummaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DD2762A9D0719009E01D7 /* SummaView.swift */; };
 		12EC20872A94C5BA00E5B8E8 /* TeamResultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EC20862A94C5BA00E5B8E8 /* TeamResultApp.swift */; };
 		12EC20892A94C5BA00E5B8E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EC20882A94C5BA00E5B8E8 /* ContentView.swift */; };
 		12EC208B2A94C5BC00E5B8E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12EC208A2A94C5BC00E5B8E8 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		124DD2762A9D0719009E01D7 /* SummaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaView.swift; sourceTree = "<group>"; };
 		12EC20832A94C5BA00E5B8E8 /* TeamResult.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamResult.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC20862A94C5BA00E5B8E8 /* TeamResultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamResultApp.swift; sourceTree = "<group>"; };
 		12EC20882A94C5BA00E5B8E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				12EC209C2A94D02500E5B8E8 /* SystemInfoView.swift */,
 				12EC209E2A94D79700E5B8E8 /* SystemTextFieldView.swift */,
+				124DD2762A9D0719009E01D7 /* SummaView.swift */,
 				12EC20A52A96231600E5B8E8 /* TeamNameView.swift */,
 			);
 			path = VViewElements;
@@ -184,6 +187,7 @@
 				12EC209F2A94D79700E5B8E8 /* SystemTextFieldView.swift in Sources */,
 				12EC20A12A94E32D00E5B8E8 /* Variables.swift in Sources */,
 				12EC20892A94C5BA00E5B8E8 /* ContentView.swift in Sources */,
+				124DD2772A9D0719009E01D7 /* SummaView.swift in Sources */,
 				12EC20A42A96139A00E5B8E8 /* Field.swift in Sources */,
 				12EC209D2A94D02500E5B8E8 /* SystemInfoView.swift in Sources */,
 				12EC20872A94C5BA00E5B8E8 /* TeamResultApp.swift in Sources */,

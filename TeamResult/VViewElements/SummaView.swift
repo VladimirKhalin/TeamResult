@@ -1,18 +1,28 @@
 //
-//  teamNameView.swift
+//  SummaView.swift
 //  TeamResult
 //
-//  Created by Vladimir Khalin on 23.08.2023.
+//  Created by Vladimir Khalin on 28.08.2023.
 //
 
 import SwiftUI
 
-struct TeamNameView: View {
+
+struct SummaView: View {
     
+    @ObservedObject var field: Field
+    @State var fieldOne: [Field]
     
+    var summa: Int {
+        var sum = 0
+        for one in fieldOne {
+            let value = Int(one.value)
+            sum += value ?? 0
+        }
+        return sum
+    }
     
     var body: some View {
-        
         GeometryReader { geometry in
             
             let width = geometry.size.width
@@ -36,23 +46,18 @@ struct TeamNameView: View {
                     .stroke(Color.white, lineWidth: 4)
                     .frame(width: width, height: hight)
                     .shadow(color: .black, radius: 1, x: 1, y: 1)
-                VStack {
-                    Text("№1")
-                        .font(.custom("Impact", size: width / 4, relativeTo: .callout))
-                        .shadow(color: .black, radius: 1, x: 2, y: 2)
-                    Text("КОМАНДА")
-                        .font(.custom("Impact", size: width / 6, relativeTo: .callout))
+               
+                Text(summa.formatted())
+                        .font(.custom("Impact", size: width / 2, relativeTo: .callout))
                         .shadow(color: .black, radius: 1, x: 2, y: 2)
                 }
-            }
-           // .animation(.default, value: number.numberFlag)
         }
     }
     }
 
-struct teamNameView_Previews: PreviewProvider {
+struct SummaView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamNameView()
-            .frame(width: 210, height: 70)
+       // SummaView(fieldOne: [Field(id: 1, value: "0")])
+       SummaView(field: Field(id: 1, value: "5"), fieldOne: [Field(id: 1, value: "0")])
     }
 }

@@ -9,9 +9,7 @@ import SwiftUI
 
 struct SystemTextFieldView: View {
     
-    
     @ObservedObject var field: Field
-    var opacityColor: Bool = true
     
     var body: some View {
         
@@ -39,19 +37,29 @@ struct SystemTextFieldView: View {
                     .stroke(Color.white, lineWidth: 4)
                     .frame(width: width, height: hight)
                     .shadow(color: .black, radius: 1, x: 1, y: 1)
-                
-                TextField("0", text: $field.value)
+               
+                    TextField("0", text: $field.value, onEditingChanged: { (editingChanged) in
+                        if editingChanged {
+                           // print("TextField focused")
+                        } else {
+                            
+                            print("TextField focus removed")
+                            
+                        }
+                    })
+                    //.onChange(of: field.value) { print($0)}
+                    
+                    
                     .font(.custom("Impact", size: width / 3, relativeTo: .callout))
                     .textFieldStyle(PlainTextFieldStyle())
                     .multilineTextAlignment(.center)
-                
-//                Text(number.id.formatted())
-//                    .foregroundColor(number.numberFlag ? .white : .init(white: 0.8))
-//                    .font(.custom("Impact", size: width / 2, relativeTo: .callout))
-//                    .scaleEffect(number.numberFlag ? 1.4 : 1)
-//                    .shadow(color: .black, radius: 1, x: 2, y: 2)
-            }
-           // .animation(.default, value: number.numberFlag)
+                    
+                  //  Text(fieldOne.sum.formatted())
+                    //.foregroundColor(number.numberFlag ? .white : .init(white: 0.8))
+                   //     .font(.custom("Impact", size: width / 2, relativeTo: .callout))
+                    // .scaleEffect(number.numberFlag ? 1.4 : 1)
+                   //     .shadow(color: .black, radius: 1, x: 2, y: 2)
+                }
         }
     }
     }
